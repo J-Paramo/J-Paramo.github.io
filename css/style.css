@@ -70,8 +70,29 @@ body{
     font-size:0.95rem;
 }
 
-.contact-info,
-.contact-info a,
-.contact-info i {
-    font-size: 0.9rem !important;
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.email-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: fit-content;
+}
+
+.copy-msg {
+    font-size: 0.8rem;
+    color: #efefef;
+    opacity: 0;
+    position: absolute;
+    right: -70px;
+    transition: all 0.2s ease;
+}
+
+.copy-msg.show {
+    opacity: 1;
 }

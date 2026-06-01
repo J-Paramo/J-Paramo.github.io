@@ -1,12 +1,13 @@
 
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("githubBtn").addEventListener("click", function(){
-        window.open("https://github.com/J-Paramo", "_blank");
-       // console.log("here");
-    });
+function copyEmail(btn) {
+    const email = document.getElementById("emailText").textContent;
+    const msg = document.getElementById("copyMsg");
 
-    document.getElementById("linkedinBtn").addEventListener("click", function(){
-        window.open("https://linkedin.com/in/jennifer-páramo", "_blank");
+    navigator.clipboard.writeText(email).then(() => {
+        msg.classList.add("show");
+
+        setTimeout(() => {
+            msg.classList.remove("show");
+        }, 1500);
     });
-    
-});
+}
