@@ -27,7 +27,7 @@ function typeWriter() {
     if (i < code.length) {
         typingElement.textContent += code.charAt(i);
         i++;
-        setTimeout(typeWriter, 30);
+        setTimeout(typeWriter, 40);
     } else {
         setTimeout(showPortfolio, 400);
     }
