@@ -26,6 +26,9 @@ body{
     text-align:center;
 }
 
+.hero-content{
+    max-width:600px;
+}
 
 .hero h1{
     font-size:4rem;
@@ -95,4 +98,80 @@ body{
 
 .copy-msg.show {
     opacity: 1;
+}
+
+.code-window{
+    background:#1e1e1e;
+    width:420px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+    font-family: Consolas, monospace;
+}
+
+.code-header{
+    height:35px;
+    background:#2d2d2d;
+    display:flex;
+    align-items:center;
+    padding-left:12px;
+    gap:8px;
+}
+
+.code-header span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.code-header span:nth-child(1){ background:#ff5f56; }
+.code-header span:nth-child(2){ background:#ffbd2e; }
+.code-header span:nth-child(3){ background:#27c93f; }
+
+.intro-screen{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hidden-content{
+    opacity:0;
+    display:none;
+}
+
+.show-content{
+    display:block;
+    animation:fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+#typingCode{
+    padding:20px;
+    color:#4FC3F7;
+    font-size:1rem;
+    min-height:150px;
+    margin:0;
+    white-space:pre-wrap;
+}
+
+#typingCode::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
